@@ -9,6 +9,10 @@
 .history
 .svn/
 migrate_working_dir/
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
 
 # IntelliJ related
 *.iml
