@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tracking_app/constant/app_colors.dart';
 import 'core/route/app_route.dart';
 
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       navigatorKey: Get.key,
       getPages: AppRoute.routes,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+        fontFamily: "PoppinsMedium",
         useMaterial3: true,
       ),
     );
