@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(height: 18,),
                       CustomButton(text: 'Login', onTap: () {
                         if(formKey.currentState!.validate()){
-                          Get.toNamed(AppRoute.attendanceScreen);
+                          Get.toNamed(AppRoute.homeScreen);
                         }
                       },),
                     ],

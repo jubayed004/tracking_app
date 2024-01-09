@@ -12,12 +12,18 @@ class DayMonthScreen extends StatefulWidget {
 }
 
 class _DayMonthScreenState extends State<DayMonthScreen> {
+  String? text;
+  @override
+  void initState() {
+    super.initState();
+    text = Get.arguments;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        title: Text("ToDay"),
+        title: Text(text??"ALL"),
         backgroundColor: AppColors.primaryColor,
         foregroundColor: AppColors.whiteColor,
         elevation: 0,

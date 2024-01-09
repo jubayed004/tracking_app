@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tracking_app/constant/app_colors.dart';
-import 'package:tracking_app/view/screen/check_work/check_work_screen.dart';
 import 'core/route/app_route.dart';
 
 void main() {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.noTransition,
       transitionDuration: const Duration(milliseconds: 200),
-      initialRoute: AppRoute.checkWorkScreen,
+      initialRoute: AppRoute.splashScreen,
       navigatorKey: Get.key,
       getPages: AppRoute.routes,
       theme: ThemeData(

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tracking_app/constant/app_colors.dart';
 import 'package:tracking_app/controller/add_work_controller.dart';
-import 'package:tracking_app/core/route/app_route.dart';
 import 'package:tracking_app/view/widget/button/custom_button.dart';
 import 'package:tracking_app/view/widget/text_field/custom_text_field.dart';
 
@@ -99,7 +98,7 @@ class AddWorkScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 18,),
                   CustomButton(text: 'Add Work', onTap: () {
-                    Get.toNamed(AppRoute.dayMonthScreen);
+
                   },),
                 ],
               ),

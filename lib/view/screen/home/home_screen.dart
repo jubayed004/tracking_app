@@ -1,23 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:tracking_app/constant/app_colors.dart';
 import 'package:tracking_app/constant/app_icons.dart';
+import 'package:tracking_app/core/route/app_route.dart';
+import 'package:tracking_app/view/screen/home/widget/drawer_widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+  
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: DrawerWidget(),
       appBar: AppBar(
         title: Center(
           child: SvgPicture.asset(AppIcons.logoText,
               color: AppColors.primaryColor, height: 60),
         ),
-        leading: const Icon(
-          Icons.menu,
-          color: Colors.cyan,
-          size: 40,
+        leading: GestureDetector(
+          onTap: (){
+            try{
+              scaffoldKey.currentState?.openDrawer();
+            }catch(error){
+              print(error);
+            }
+          },
+          child: const Icon(
+            Icons.menu,
+            color: Colors.cyan,
+            size: 40,
+          ),
         ),
       ),
       body: Padding(
@@ -64,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: (){
-
+                      Get.toNamed(AppRoute.attendanceScreen);
                     },
                     child: Column(
                       children: [
@@ -87,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: (){
-
+                      Get.toNamed(AppRoute.addWorkScreen);
                     },
                     child: Column(
                       children: [
@@ -116,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: (){
-
+                      Get.toNamed(AppRoute.checkWorkScreen);
                     },
                     child: Column(
                       children: [
@@ -139,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: (){
-
+                      Get.toNamed(AppRoute.profileScreen);
                     },
                     child: Column(
                       children: [
