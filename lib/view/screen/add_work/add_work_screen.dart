@@ -99,7 +99,7 @@ class AddWorkScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 18,),
                   CustomButton(text: 'Add Work', onTap: () {
-                    Get.toNamed(AppRoute.loginScreen);
+                    Get.toNamed(AppRoute.dayMonthScreen);
                   },),
                 ],
               ),

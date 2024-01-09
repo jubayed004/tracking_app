@@ -11,7 +11,7 @@ class SplashController extends GetxController{
   }
 
   void navigation(){
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 3), () {
       Get.offAndToNamed(AppRoute.loginScreen);
     });
   }
